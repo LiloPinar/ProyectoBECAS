@@ -1,0 +1,388 @@
+/* ----- Estilos generales del cuerpo ----- */
+body {
+    font-family:'Roboto',Arial,sans-serif;/*Fuente principal*/
+    background:#f8f9fa;/*Color de fondo claro*/
+    margin:0;/*Sin margen*/
+}
+
+/* ----- Encabezado de administración ----- */
+.admin-header {
+    position:sticky;/*Fijo en la parte superior*/
+    top:0;/*Pegado arriba*/
+    background:#f3f3f3;/*Fondo gris claro*/
+    border-bottom:3px solid #c62828;/*Borde rojo inferior*/
+    width:100%;/*Ancho completo*/
+    z-index:100;/*Encima de otros elementos*/
+    display:flex;/*Flex horizontal*/
+    align-items:center;/*Centrado vertical*/
+    justify-content:space-between;/*Separar extremos*/
+    padding:14px 55px 14px 28px;/*Espaciado interno*/
+    box-sizing:border-box;/*Incluir padding y borde en el tamaño*/
+}
+
+/* ----- Logo del encabezado ----- */
+.header-logo {
+    filter:none!important;/*Sin filtro*/
+    opacity:1!important;/*Totalmente visible*/
+    height:53px;/*Altura del logo*/
+    margin-left:0;/*Sin margen izquierdo*/
+}
+
+/* ----- Nombre del usuario ----- */
+.usuario-nombre {
+    font-size:1.08em;/*Tamaño de letra*/
+    color:#0d3447;/*Color azul oscuro*/
+    font-weight:600;/*Negrita media*/
+    display:flex;/*Flex horizontal*/
+    align-items:center;/*Centrado vertical*/
+    gap:10px;/*Espacio entre elementos*/
+}
+
+/* ----- Ícono del usuario ----- */
+.icono-usuario {
+    height:30px;/*Tamaño del ícono*/
+    margin-left:12px;/*Separación izquierda*/
+    opacity:0.7;/*Transparencia media*/
+}
+
+/* ----- Contenedor principal ----- */
+.admin-main {
+    display:flex;/*Flex horizontal*/
+    min-height:90vh;/*Altura mínima del viewport*/
+    margin-top:0;/*Sin margen superior*/
+}
+
+/* ----- Barra lateral de navegación ----- */
+.admin-nav {
+    width:240px;/*Ancho fijo*/
+    background:#fafbfb;/*Fondo claro*/
+    border-right:1.8px solid #e6e6e6;/*Borde derecho gris claro*/
+    padding-top:32px;/*Espacio arriba*/
+    min-height:90vh;/*Altura mínima*/
+    box-shadow:2px 0 10px #0001;/*Sombra lateral*/
+}
+
+.admin-nav ul {
+    list-style:none;/*Sin viñetas*/
+    padding:0;/*Sin padding*/
+    margin:0;/*Sin margen*/
+}
+
+.admin-nav li {
+    padding:16px 32px;/*Espaciado interno*/
+    cursor:pointer;/*Mano al pasar*/
+    color:#c62828;/*Rojo oscuro*/
+    font-weight:500;/*Negrita media*/
+    font-size:1.04em;/*Tamaño de fuente*/
+    border-left:4px solid transparent;/*Borde izquierdo invisible*/
+    transition:all 0.18s;/*Transición suave*/
+    letter-spacing:0.2px;/*Espaciado de letras*/
+}
+
+.admin-nav li.active,
+.admin-nav li:hover {
+    background:#ffebee;/*Fondo rojo claro*/
+    border-left:4px solid #c62828;/*Borde rojo visible*/
+    color:#000;/*Texto negro*/
+}
+
+.admin-nav li.cerrar-sesion {
+    color:#fff;/*Texto blanco*/
+    background:#c62828;/*Fondo rojo*/
+    margin-top:40px;/*Separación arriba*/
+    border-left:4px solid #c62828;/*Borde rojo*/
+    text-align:center;/*Texto centrado*/
+    border-radius:7px 0 0 7px;/*Esquinas redondeadas izquierdas*/
+}
+
+/* ----- Contenido principal ----- */
+.admin-content {
+    flex:1;/*Ocupar espacio restante*/
+    padding:36px 36px 40px 36px;/*Espaciado interno*/
+    min-height:80vh;/*Altura mínima*/
+    max-width:1200px;/*Ancho máximo*/
+    margin:0 auto;/*Centrado horizontal*/
+}
+
+/* ----- Animación de aparición ----- */
+@keyframes fadeIn {
+    from {opacity:0;}/*Inicio invisible*/
+    to {opacity:1;}/*Final visible*/
+}
+
+/* ----- Tarjetas del resumen ----- */
+.cards-resumen {
+    display:flex;/*Flex horizontal*/
+    gap:30px;/*Espacio entre tarjetas*/
+    margin:35px 0 22px 0;/*Márgenes verticales*/
+}
+
+/* ----- Tarjeta del resumen ----- */
+.card {
+    flex:1;/*Ocupar espacio disponible*/
+    background:#fff;/*Fondo blanco*/
+    border-radius:13px;/*Esquinas redondeadas*/
+    box-shadow:0 2px 14px #c6282833;/*Sombra suave roja*/
+    padding:32px 14px 24px 14px;/*Espaciado interno*/
+    text-align:center;/*Texto centrado*/
+    border:1.2px solid #f5c5c5;/*Borde rosado claro*/
+}
+.card-num {
+    font-size:2.5em;/*Tamaño grande*/
+    font-weight:bold;/*Texto negrita*/
+    color:#c62828;/*Color rojo*/
+    margin-bottom:7px;/*Separación inferior*/
+}
+.p-resumen {
+    font-size:1.08em;/*Tamaño de letra*/
+    color:#444;/*Gris oscuro*/
+    margin-bottom:0;/*Sin margen inferior*/
+}
+
+/* ----- Tabla general ----- */
+table {
+    width:100%;/*Ancho completo*/
+    border-collapse:collapse;/*Bordes colapsados*/
+    margin:26px 0 16px 0;/*Márgenes verticales*/
+    background:#fff;/*Fondo blanco*/
+    border-radius:8px;/*Esquinas redondeadas*/
+    overflow:hidden;/*Ocultar desbordes*/
+    box-shadow:0 1px 12px #bbb3;/*Sombra gris*/
+}
+th, td {
+    padding:13px 9px;/*Espaciado interno*/
+    text-align:left;/*Alineación izquierda*/
+    border-bottom:1.2px solid #e0e0e0;/*Línea inferior gris*/
+    font-size:1em;/*Tamaño base*/
+}
+th {
+    background:#f3f3f3;/*Fondo gris claro*/
+    color:#c62828;/*Texto rojo*/
+    font-weight:700;/*Negrita*/
+}
+tr:last-child td {
+    border-bottom:none;/*Sin borde en la última fila*/
+}
+
+/* ----- Botones generales ----- */
+button,
+.btn-modal, .btn-guardar {
+    background:#c62828;/*Fondo rojo*/
+    color:#fff;/*Texto blanco*/
+    border:none;/*Sin borde*/
+    border-radius:7px;/*Bordes redondeados*/
+    padding:8px 18px;/*Espaciado interno*/
+    font-weight:500;/*Negrita media*/
+    font-size:1.01em;/*Tamaño texto*/
+    cursor:pointer;/*Mano al pasar*/
+    margin:2px 0;/*Margen vertical*/
+    transition:background 0.18s;/*Transición suave*/
+}
+button:hover, .btn-modal:hover, .btn-guardar:hover {
+    background:#981313;/*Rojo más oscuro al pasar*/
+}
+button.verde, .btn-modal.verde {
+    background:#25b54c;/*Verde*/
+}
+button.verde:hover, .btn-modal.verde:hover {
+    background:#127e2b;/*Verde oscuro*/
+}
+button.rojo, .btn-modal.rojo {
+    background:#e53935;/*Rojo brillante*/
+}
+button.rojo:hover, .btn-modal.rojo:hover {
+    background:#ab1512;/*Rojo oscuro*/
+}
+
+/* ----- Fila superior (top-row) ----- */
+.top-row {
+    display:flex;/*Flex horizontal*/
+    align-items:center;/*Centrado vertical*/
+    justify-content:space-between;/*Espaciado entre elementos*/
+    gap:24px;/*Espacio entre ítems*/
+    margin-bottom:8px;/*Separación inferior*/
+}
+.top-row h2 {
+    margin:0;/*Sin margen*/
+}
+
+/* ----- Fondo del modal ----- */
+.modal-bg {
+    position:fixed;/*Fijo en pantalla*/
+    z-index:1000;/*Encima de todo*/
+    left:0; top:0; width:100vw; height:100vh;/*Tamaño completo*/
+    background:#2226;/*Fondo oscuro semitransparente*/
+    align-items:center;/*Centrado vertical*/
+    justify-content:center;/*Centrado horizontal*/
+}
+
+/* ----- Contenido del modal ----- */
+.modal {
+    background:#fff;/*Fondo blanco*/
+    border-radius:14px;/*Esquinas redondeadas*/
+    max-width:420px;/*Ancho máximo*/
+    padding:32px 28px 16px 28px;/*Espaciado interno*/
+    box-shadow:0 8px 32px #0005;/*Sombra oscura*/
+    position:relative;/*Posicionamiento relativo*/
+}
+.modal-botones {
+    display:flex;/*Flex horizontal*/
+    gap:16px;/*Espacio entre botones*/
+    justify-content:flex-end;/*Alinear a la derecha*/
+    margin-top:25px;/*Separación superior*/
+}
+
+/* ----- Modal de edición ----- */
+#modal-editar .modal {
+    max-width:420px!important;/*Ancho máximo forzado*/
+    width:95vw;/*Casi todo el ancho de la ventana*/
+    margin:60px auto;/*Margen arriba y centrado*/
+    padding:32px 28px 16px 28px;/*Espaciado interno*/
+    font-size:1.05em;/*Tamaño de letra*/
+}
+#modal-editar input {
+    font-size:1em;/*Tamaño de fuente*/
+    padding:12px 8px;/*Espaciado interno*/
+}
+
+/* ----- Entradas y selects ----- */
+input, select {
+    font-family:inherit;/*Heredar fuente*/
+    margin-bottom:11px;/*Separación inferior*/
+    padding:10px 9px;/*Espaciado interno*/
+    font-size:1.03em;/*Tamaño de letra*/
+    border:1.3px solid #b6b6b6;/*Borde gris*/
+    border-radius:7px;/*Esquinas redondeadas*/
+    background:#fcfcfc;/*Fondo blanco suave*/
+    width:100%;/*Ocupar todo el ancho*/
+    box-sizing:border-box;/*Incluir padding en tamaño total*/
+}
+input:focus, select:focus {
+    border:1.5px solid #c62828;/*Borde rojo al enfocar*/
+    box-shadow:0 2px 10px #c6282822;/*Sombra suave roja*/
+    background:#fff;/*Fondo blanco*/
+    outline:none;/*Sin contorno azul por defecto*/
+}
+
+/* ----- Mensaje de configuración ----- */
+#config-msg {
+    color:#198d34;/*Verde oscuro*/
+    margin-top:10px;/*Separación superior*/
+    font-weight:600;/*Negrita*/
+}
+
+/* ----- Diseño responsive para pantallas pequeñas ----- */
+@media (max-width: 900px) {
+    .admin-main { flex-direction:column; }/*Cambiar a columna*/
+    .admin-nav { width:100%; display:flex; border:none; box-shadow:none; padding-top:5px; min-height:unset; }/*Navegación adaptada*/
+    .admin-nav ul { display:flex; }/*Menú horizontal*/
+    .admin-nav li { flex:1; padding:12px 8px; font-size:1em; text-align:center; }/*Distribución uniforme*/
+    .admin-content { padding:14px 4vw 25px 4vw; }/*Padding adaptable*/
+    .cards-resumen { flex-direction:column; gap:14px; }/*Tarjetas en columna*/
+}
+
+/* ----- Fondo del modal (sobrescribe anterior) ----- */
+.modal-bg {
+    position:fixed;/*Fijo en pantalla*/
+    top:0; left:0; width:100vw; height:100vh;/*Pantalla completa*/
+    background:rgba(0,0,0,0.15);/*Oscurecido ligero*/
+    justify-content:center; align-items:center;/*Centrado*/
+    z-index:2000;/*Muy por encima*/
+}
+
+/* ----- Contenedor del modal (versión adicional) ----- */
+.modal {
+    background:#fff;/*Fondo blanco*/
+    border-radius:8px;/*Esquinas redondeadas*/
+    padding:24px 24px 18px 24px;/*Espaciado interno*/
+    box-shadow:0 6px 32px #d1d2d3;/*Sombra suave*/
+    min-width:320px;/*Ancho mínimo*/
+    max-width:90vw;/*Ancho máximo adaptable*/
+}
+
+/* ----- Botones del modal ----- */
+.btn-modal {
+    padding:8px 20px;/*Espaciado interno*/
+    font-size:1em;/*Tamaño texto*/
+    margin-right:8px;/*Separación derecha*/
+    border-radius:5px;/*Bordes redondeados*/
+    border:none;/*Sin borde*/
+    cursor:pointer;/*Mano al pasar*/
+}
+.btn-modal.verde { background:#388e3c; color:#fff; }/*Botón verde*/
+.btn-modal.rojo { background:#d32f2f; color:#fff; }/*Botón rojo*/
+.btn-modal-cerrar { background:#888; color:#fff; }/*Botón gris*/
+
+/* ----- Modal de revisión ----- */
+#modal-revision .modal {
+    max-height:90vh;/*Altura máxima visible*/
+    overflow-y:auto;/*Desplazamiento vertical*/
+    max-width:550px;/*Ancho máximo*/
+    margin:40px auto;/*Centrado vertical*/
+    background:#fff;/*Fondo blanco*/
+    border-radius:18px;/*Esquinas redondeadas*/
+    box-shadow:0 6px 40px #32325d2a;/*Sombra suave*/
+    padding:34px 32px 24px 32px;/*Espaciado interno*/
+    font-size:1.08em;/*Tamaño texto*/
+    line-height:1.52;/*Altura de línea*/
+}
+
+/* ----- Etiqueta de campo ----- */
+#modal-revision .detalle-label {
+    font-weight:600;/*Negrita*/
+    color:#34495e;/*Gris azulado*/
+    min-width:135px;/*Ancho mínimo*/
+    display:inline-block;/*Bloque en línea*/
+}
+
+/* ----- Título de sección ----- */
+#modal-revision .detalle-section-title {
+    color:#b71c1c;/*Rojo oscuro*/
+    font-weight:bold;/*Negrita*/
+    margin-top:24px;/*Separación superior*/
+    margin-bottom:8px;/*Separación inferior*/
+    font-size:1.08em;/*Tamaño texto*/
+}
+
+/* ----- Título de encuesta ----- */
+#modal-revision .detalle-encuesta-title {
+    color:#1565c0;/*Azul fuerte*/
+    font-weight:bold;/*Negrita*/
+    margin-top:20px;/*Separación superior*/
+    margin-bottom:7px;/*Separación inferior*/
+}
+
+/* ----- Lista de detalles ----- */
+#modal-revision ul.detalle-lista {
+    padding-left:20px;/*Sangría izquierda*/
+    margin-bottom:10px;/*Separación inferior*/
+}
+#modal-revision ul.detalle-lista li {
+    margin-bottom:2px;/*Espacio entre ítems*/
+}
+
+/* ----- Botón PDF ----- */
+#modal-revision .detalle-pdf-btn {
+    background:#b71c1c;/*Fondo rojo*/
+    color:#fff;/*Texto blanco*/
+    border:none;/*Sin borde*/
+    border-radius:7px;/*Bordes redondeados*/
+    padding:6px 22px;/*Espaciado interno*/
+    font-weight:500;/*Negrita media*/
+    margin-left:8px;/*Separación izquierda*/
+    cursor:pointer;/*Mano al pasar*/
+    font-size:1em;/*Tamaño fuente*/
+    margin-top:8px;/*Separación superior*/
+}
+
+/* ----- Campo de detalle ----- */
+#modal-revision .detalle-campo {
+    margin-bottom:4px;/*Separación inferior*/
+}
+
+/* ----- Contenedor con scroll ----- */
+.detalle-scroll {
+    max-height:60vh;/*Altura máxima*/
+    overflow-y:auto;/*Desplazamiento vertical*/
+    padding-right:8px;/*Espacio para scrollbar*/
+}

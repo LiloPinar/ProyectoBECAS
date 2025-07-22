@@ -1,0 +1,286 @@
+/* ========== CUERPO DE LA PÁGINA ========== */
+body {
+    font-family:Arial,sans-serif;/*Fuente principal del texto*/
+    margin:0;/*Elimina márgenes del navegador*/
+    background-color:#f9f9f9;/*Color de fondo gris claro*/
+}
+
+
+/* ========== HEADER SUPERIOR: LOGO Y REDES ========== */
+header {
+    background-color:white;/*Fondo blanco*/
+    border-bottom:1px solid #ddd;/*Línea inferior gris*/
+    padding:20px 0;/*Espaciado vertical del header*/
+}
+.contenedor-header {
+    max-width:1200px;/*Ancho máximo del contenedor*/
+    margin:0 auto;/*Centrado horizontal*/
+    padding:12px 25px;/*Espaciado interior*/
+    display:flex;/*Flexbox para distribuir contenido*/
+    align-items:center;/*Alinea verticalmente al centro*/
+    justify-content:space-between;/*Espacia elementos*/
+}
+.logo {
+    height:52px;/*Altura del logo*/
+}
+
+.redes {
+    display:flex;/*Alineación horizontal de íconos*/
+    gap:16px;/*Espacio entre íconos*/
+}
+.icono {
+    width:27px;/*Ancho del ícono*/
+    height:27px;/*Alto del ícono*/
+    transition:transform 0.15s;/*Suaviza la transformación*/
+}
+.icono:hover {
+    transform:scale(1.13);/*Aumenta el tamaño al pasar el mouse*/
+}
+
+
+/* ========== TÍTULO PRINCIPAL Y BANNER ========== */
+.titulo-principal {
+    text-align:center;/*Centra el texto*/
+    font-size:2.3em;/*Tamaño del texto grande*/
+    color:#0C4474;/*Color azul oscuro*/
+    font-weight:bold;/*Negrita*/
+    margin:32px 0 16px 0;/*Espaciado arriba y abajo*/
+    letter-spacing:1px;/*Espacio entre letras*/
+}
+
+.img-banner {
+    width:92%;/*Ancho relativo al contenedor*/
+    max-width:1080px;/*Ancho máximo*/
+    height:260px;/*Altura fija*/
+    object-fit:cover;/*Recorta y mantiene proporción*/
+    display:block;/*Comportamiento de bloque*/
+    margin:0 auto 35px auto;/*Centrado y espacio inferior*/
+    border-radius:18px;/*Bordes redondeados*/
+    box-shadow:0 4px 24px #c0daf830;/*Sombra suave alrededor*/
+}
+
+
+/* ========== CONTENIDO CENTRAL ========== */
+.contenido {
+    padding:20px;/*Espaciado interno*/
+    text-align:center;/*Centra el texto*/
+}
+
+
+/* ========== TARJETA NORMATIVA ========== */
+.tarjeta-normativa {
+    width:170px;/*Ancho fijo*/
+    height:160px;/*Alto fijo*/
+    background:#fff;/*Fondo blanco*/
+    border-radius:25px;/*Bordes redondeados*/
+    box-shadow:0 0 14px 1px #d5e8fa;/*Sombra suave azul claro*/
+    display:flex;/*Flexbox para centrar contenido*/
+    flex-direction:column;/*Dirección vertical*/
+    align-items:center;/*Centrado horizontal*/
+    justify-content:center;/*Centrado vertical*/
+    transition:box-shadow 0.2s,transform 0.2s;/*Transiciones suaves*/
+    margin:18px auto 24px auto;/*Centrado vertical y espaciado*/
+    cursor:pointer;/*Cambia el cursor a mano*/
+}
+
+.tarjeta-normativa:hover {
+    box-shadow:0 0 22px 2px #98b9e6;/*Aumenta la sombra al pasar el mouse*/
+    transform:translateY(-3px) scale(1.04);/*Sube y agranda ligeramente*/
+}
+
+.icono-tarjeta {
+    width:46px;/*Ancho del ícono*/
+    height:46px;/*Alto del ícono*/
+    margin-bottom:12px;/*Espacio debajo del ícono*/
+    filter:brightness(0.5) saturate(2) hue-rotate(170deg);/*Efecto visual al ícono*/
+}
+
+.texto-tarjeta {
+    font-size:1.08em;/*Tamaño del texto*/
+    color:#0C4474;/*Color azul oscuro*/
+    text-align:center;/*Centrado*/
+    font-weight:500;/*Peso medio del texto*/
+    font-family:'Arial',serif;/*Fuente del texto*/
+}
+
+
+/* ========== LÍNEA SEPARADORA ========== */
+.separador {
+    border:none;/*Sin borde visible*/
+    height:3px;/*Altura de la línea*/
+    width:65%;/*Ancho relativo*/
+    background:linear-gradient(90deg,#0C4474 0%,#1976d2 100%);/*Degradado azul*/
+    margin:35px auto 30px auto;/*Centrado con márgenes*/
+    border-radius:5px;/*Bordes redondeados*/
+    box-shadow:0 1px 6px #d5e8fa60;/*Sombra suave*/
+}
+
+
+/* ========== COLUMNAS DE REQUISITOS ========== */
+.columnas {
+    display:flex;/*Distribuye elementos en fila*/
+    justify-content:space-around;/*Espacio entre columnas*/
+    flex-wrap:wrap;/*Permite que se ajusten en pantallas pequeñas*/
+    margin-top:20px;/*Espacio superior*/
+}
+
+.columnas>div {
+    width:45%;/*Ancho de cada columna*/
+}
+
+
+/* ========== BOTÓN ACORDEÓN PARA REQUISITOS ========== */
+.btn-toggle {
+    width:100%;/*Ocupa todo el ancho disponible*/
+    background-color:#0C4474;/*Fondo azul oscuro*/
+    color:#fff;/*Texto blanco*/
+    font-weight:bold;/*Negrita*/
+    border-radius:4px 4px 0 0;/*Bordes redondeados arriba*/
+    padding:12px 16px;/*Espaciado interior*/
+    text-align:left;/*Texto alineado a la izquierda*/
+    cursor:pointer;/*Cambia cursor a mano*/
+    display:flex;/*Contenedor flexible*/
+    justify-content:space-between;/*Espaciado entre contenido*/
+    align-items:center;/*Centrado vertical*/
+    margin:10px 0 0;/*Margen superior*/
+    border:none;/*Sin borde*/
+    transition:background-color 0.2s;/*Transición de color al pasar el mouse*/
+}
+
+.btn-toggle::after {
+    content:"▼";/*Flecha hacia abajo*/
+    font-size:0.8em;/*Tamaño de la flecha*/
+    transition:transform 0.2s;/*Transición suave*/
+}
+
+.btn-toggle.active::after {
+    content:"▲";/*Cambia flecha a arriba si está activa*/
+}
+
+.btn-toggle:hover {
+    background-color:#083055;/*Oscurece el fondo al pasar el mouse*/
+}
+
+
+/* ========== PANEL DESPLEGABLE DEL ACORDEÓN ========== */
+.contenido-oculto {
+    margin:0 0 10px;/*Espaciado inferior*/
+    background-color:#f0f4f8;/*Fondo gris azulado claro*/
+    padding:12px 20px;/*Espaciado interno*/
+    border-radius:0 0 4px 4px;/*Bordes redondeados abajo*/
+    text-align:left;/*Alineación del texto*/
+}
+
+.contenido-oculto ol {
+    padding-left:1.2em;/*Sangría de la lista*/
+    margin:0;/*Elimina márgenes*/
+}
+
+.contenido-oculto li {
+    margin:6px 0;/*Espaciado entre elementos*/
+    color:#0C4474;/*Color de texto*/
+}
+
+
+/* ========== BOTÓN POSTULAR CENTRADO ========== */
+.centrado {
+    text-align:center;/*Centra el contenido*/
+    margin-top:30px;/*Espacio superior*/
+}
+
+.btn-postular {
+    background-color:#e53935;/*Rojo fuerte*/
+    color:#fff;/*Texto blanco*/
+    font-weight:bold;/*Negrita*/
+    font-size:1em;/*Tamaño del texto*/
+    padding:12px 36px;/*Espaciado interno*/
+    border:none;/*Sin borde*/
+    border-radius:7px;/*Bordes redondeados*/
+    cursor:pointer;/*Cursor tipo mano*/
+    transition:background 0.18s;/*Suaviza el cambio de fondo*/
+}
+
+.btn-postular:hover,
+.btn-postular:focus {
+    background-color:#b71c1c;/*Rojo más oscuro al pasar o enfocar*/
+}
+
+
+/* ========== FOOTER INSTITUCIONAL ========== */
+footer {
+    margin-top:40px;/*Espacio superior*/
+    background:none;/*Sin fondo*/
+    padding:0;/*Sin espaciado*/
+}
+
+.footer-superior {
+    background-color:#0C4474;/*Azul oscuro*/
+    color:#fff;/*Texto blanco*/
+    display:flex;/*Layout flexible*/
+    align-items:center;/*Centrado vertical*/
+    justify-content:space-between;/*Espaciado horizontal*/
+    padding:28px 60px 20px 60px;/*Relleno interior*/
+    flex-wrap:wrap;/*Adaptable a múltiples líneas*/
+}
+
+.footer-logo img {
+    height:65px;/*Tamaño del logo*/
+    filter:brightness(0) invert(1);/*Invierte colores para fondo oscuro*/
+}
+
+.footer-direccion {
+    flex:1;/*Ocupa todo el espacio disponible*/
+    text-align:center;/*Centrado de texto*/
+    font-size:1.13em;/*Tamaño del texto*/
+    font-weight:bold;/*Negrita*/
+    display:flex;/*Flexbox*/
+    align-items:center;/*Centrado vertical*/
+    justify-content:center;/*Centrado horizontal*/
+}
+
+.footer-redes {
+    display:flex;/*Íconos en fila*/
+    gap:18px;/*Espaciado entre íconos*/
+    align-items:center;/*Centrado vertical*/
+}
+
+.footer-redes img {
+    width:26px;/*Tamaño del ícono*/
+    height:26px;
+    filter:brightness(0) invert(1);/*Blanco para fondo oscuro*/
+    transition:transform 0.2s;/*Suaviza animación*/
+}
+
+.footer-redes img:hover {
+    transform:scale(1.16);/*Aumenta tamaño al pasar el mouse*/
+}
+
+.footer-inferior {
+    background:#f3f3f3;/*Fondo gris claro*/
+    color:#777;/*Texto gris oscuro*/
+    text-align:center;/*Centrado*/
+    font-size:1em;/*Tamaño del texto*/
+    padding:10px 10px 8px 10px;/*Espaciado interior*/
+    letter-spacing:0.01em;/*Espaciado entre letras*/
+}
+
+
+/* ========== RESPONSIVE (DISPOSITIVOS PEQUEÑOS) ========== */
+@media(max-width:850px){
+    .columnas>div {
+        width:100%;/*Columna ocupa toda la fila*/
+    }
+
+    .footer-superior {
+        flex-direction:column;/*Footer en vertical*/
+        padding:18px 5vw 18px 5vw;/*Relleno adaptable*/
+    }
+
+    .img-banner {
+        height:160px;/*Altura más pequeña del banner*/
+    }
+
+    .titulo-principal {
+        font-size:1.3em;/*Texto más pequeño en móviles*/
+    }
+}

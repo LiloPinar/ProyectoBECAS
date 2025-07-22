@@ -1,0 +1,189 @@
+/* ----- Fondo y tipografía general ----- */
+body {
+    background: #f8f9fa;/*Fondo claro*/
+    margin: 0;/*Sin margen exterior*/
+    font-family: 'Arial', sans-serif;/*Tipografía general*/
+}
+
+/* ----- Header fijo: logo y usuario ----- */
+.post-header {
+    display: flex;/*Distribución horizontal*/
+    align-items: center;/*Centrado vertical*/
+    justify-content: space-between;/*Separación entre elementos*/
+    padding: 14px 38px;/*Espaciado interno*/
+    box-sizing: border-box;/*Incluye padding y borde en tamaño*/
+    background: #fff;/*Fondo blanco*/
+    border-bottom: 2px solid #eee;/*Línea inferior gris claro*/
+    position: sticky;/*Fijo en la parte superior*/
+    top: 0;/*Desde el borde superior*/
+    z-index: 10;/*Prioridad de apilamiento*/
+    box-shadow: 0 2px 18px #e2e9f3a8;/*Sombra inferior*/
+}
+.header-logo {
+    height: 60px;/*Altura del logo*/
+}
+.usuario-nombre {
+    font-size: 1.17em;/*Tamaño del texto*/
+    color: #183b56;/*Color de texto*/
+    font-weight: 700;/*Negrita*/
+    letter-spacing: 0.5px;/*Espaciado entre letras*/
+}
+
+/* ----- Contenedor principal ----- */
+main {
+    display: flex;/*Flexbox*/
+    justify-content: center;/*Centrado horizontal*/
+    margin-top: 40px;/*Espacio superior*/
+    margin-bottom: 60px;/*Espacio inferior*/
+    min-height: 85vh;/*Altura mínima del contenido*/
+}
+
+/* ----- Tarjeta del formulario ----- */
+.form-card {
+    background: #fff;/*Fondo blanco*/
+    border-radius: 18px;/*Bordes redondeados*/
+    box-shadow: 0 6px 32px #c6282814;/*Sombra suave*/
+    padding: 38px 44px 36px 44px;/*Espaciado interno*/
+    width: 100%;/*Ancho completo*/
+    max-width: 650px;/*Ancho máximo*/
+    border: 1.6px solid #eee;/*Borde gris claro*/
+    margin: 0 auto;/*Centrado horizontal*/
+}
+.form-card h2 {
+    margin-top: 0;/*Sin margen superior*/
+    margin-bottom: 24px;/*Espacio inferior*/
+    color: #444;/*Color del texto*/
+    font-size: 1.18em;/*Tamaño del texto*/
+    background: #bdbdbd;/*Fondo gris*/
+    padding: 16px 20px;/*Espaciado interno*/
+    border-radius: 12px;/*Bordes redondeados*/
+    font-weight: bold;/*Negrita*/
+    letter-spacing: 1px;/*Espaciado entre letras*/
+    border-bottom: 2.2px solid #888;/*Línea inferior*/
+    text-align: left;/*Alineación izquierda*/
+    box-shadow: 0 3px 12px #e3e3e3;/*Sombra inferior*/
+}
+.form-card p {
+    color: #555;/*Color del texto*/
+    font-size: 1.05em;/*Tamaño del texto*/
+    margin-bottom: 18px;/*Espacio inferior*/
+}
+
+/* ----- Preguntas y opciones ----- */
+label {
+    font-weight: bold;/*Negrita*/
+    color: #222;/*Color oscuro*/
+    margin-bottom: 4px;/*Espacio inferior*/
+    display: block;/*Ocupa línea completa*/
+    font-size: 1.07em;/*Tamaño del texto*/
+}
+.opciones {
+    display: flex;/*Flexbox*/
+    flex-direction: column;/*Columnas*/
+    gap: 6px;/*Espaciado entre opciones*/
+    margin-left: 20px;/*Sangría izquierda*/
+    margin-bottom: 17px;/*Espacio inferior*/
+}
+.opciones label {
+    display: flex;/*Alinear ícono y texto*/
+    align-items: center;/*Centrado vertical*/
+    font-weight: normal;/*Peso normal*/
+    color: #373737;/*Color del texto*/
+    font-size: 1em;/*Tamaño estándar*/
+    margin: 0;/*Sin margen*/
+}
+input[type="radio"] {
+    accent-color: #c62828;/*Color personalizado*/
+    margin-right: 7px;/*Espacio entre ícono y texto*/
+    margin-bottom: 1px;/*Ajuste vertical*/
+}
+textarea[name="situacion"] {
+    width: 100%;/*Ocupar todo el ancho*/
+    border-radius: 9px;/*Bordes redondeados*/
+    border: 1.5px solid #bdbdbd;/*Borde gris medio*/
+    padding: 12px;/*Espaciado interno*/
+    font-size: 1em;/*Tamaño del texto*/
+    resize: vertical;/*Redimensionable solo vertical*/
+    background: #f7f7f7;/*Fondo claro*/
+    margin-bottom: 8px;/*Espacio inferior*/
+    min-height: 56px;/*Altura mínima*/
+    transition: border 0.2s, box-shadow 0.2s;/*Transiciones suaves*/
+}
+textarea[name="situacion"]:focus {
+    border: 1.7px solid #c62828;/*Color destacado*/
+    background: #fff;/*Fondo blanco*/
+    outline: none;/*Sin borde externo predeterminado*/
+    box-shadow: 0 2px 10px #c628281a;/*Sombra al enfocar*/
+}
+
+/* ----- Botones ----- */
+.botones-form {
+    display: flex;/*Flexbox*/
+    justify-content: flex-end;/*Alineación a la derecha*/
+    gap: 18px;/*Espacio entre botones*/
+    margin-top: 25px;/*Espacio superior*/
+}
+.btn-siguiente {
+    background: #2ecc40;/*Fondo verde*/
+    color: #fff;/*Texto blanco*/
+    font-weight: bold;/*Negrita*/
+    padding: 12px 52px;/*Espaciado interno*/
+    border: none;/*Sin borde*/
+    border-radius: 10px;/*Bordes redondeados*/
+    font-size: 1.06em;/*Tamaño del texto*/
+    cursor: pointer;/*Cursor tipo mano*/
+    transition: background 0.2s, box-shadow 0.18s;/*Transiciones*/
+    box-shadow: 0 3px 16px #c6e8d8;/*Sombra*/
+}
+.btn-siguiente:hover {
+    background: #198d34;/*Verde más oscuro al pasar mouse*/
+}
+.btn-salir {
+    background: #c62828;/*Fondo rojo*/
+    color: #fff;/*Texto blanco*/
+    font-weight: bold;/*Negrita*/
+    padding: 12px 52px;/*Espaciado interno*/
+    border: none;/*Sin borde*/
+    border-radius: 10px;/*Bordes redondeados*/
+    font-size: 1.06em;/*Tamaño del texto*/
+    cursor: pointer;/*Cursor tipo mano*/
+    transition: background 0.18s, box-shadow 0.18s;/*Transiciones*/
+    box-shadow: 0 3px 16px #e8c6c6;/*Sombra*/
+}
+.btn-salir:hover {
+    background: #981313;/*Rojo oscuro al pasar mouse*/
+}
+
+/* ----- Responsive para móviles ----- */
+@media (max-width: 850px) {
+    .form-card {
+        padding: 14px 3vw 23px 3vw;/*Espaciado adaptable*/
+    }
+    .form-card h2 {
+        padding: 9px 10px;/*Espaciado reducido*/
+        font-size: 1em;/*Texto más pequeño*/
+    }
+    .header-logo {
+        height: 40px;/*Logo más pequeño*/
+    }
+    .post-header {
+        padding: 10px 4vw 10px 2vw;/*Espaciado lateral adaptable*/
+    }
+}
+
+/* Botón de cerrar sesión en header */
+.btn-salir-header {
+    background: #c62828;/*Rojo*/
+    color: #fff;/*Texto blanco*/
+    border: none;/*Sin borde*/
+    border-radius: 5px;/*Bordes redondeados*/
+    padding: 8px 20px;/*Espaciado interno*/
+    font-weight: bold;/*Negrita*/
+    cursor: pointer;/*Cursor tipo mano*/
+    font-size: 1em;/*Tamaño estándar*/
+    margin-right: 10px;/*Espacio derecho*/
+    transition: background 0.2s;/*Transición suave*/
+}
+.btn-salir-header:hover {
+    background: #981313;/*Rojo más oscuro al pasar mouse*/
+}

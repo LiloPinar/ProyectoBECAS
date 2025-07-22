@@ -1,0 +1,223 @@
+/* ----- Fondo y tipografía general ----- */
+body {
+  background: linear-gradient(135deg,#f5f8fc 0%,#e8ecf4 100%);/* Fondo con gradiente */
+  margin: 0;/* Elimina margen */
+  font-family: 'Arial', sans-serif;/* Tipografía base */
+  min-height: 100vh;/* Altura mínima de la vista */
+}
+
+/* ----- Header Superior: logo y usuario ----- */
+.post-header {
+  position: sticky;/* Fijo al hacer scroll */
+  top: 0;/* Posición top */
+  z-index: 10;/* Superposición */
+  display: flex;/* Layout horizontal */
+  align-items: center;/* Centrado vertical */
+  justify-content: space-between;/* Espaciado entre logo y usuario */
+  background: #fff;/* Fondo blanco */
+  padding: 14px 56px 14px 38px;/* Espaciado interno */
+  border-bottom: 2px solid #eee;/* Línea inferior */
+  box-shadow: 0 2px 18px #e2e9f3a8;/* Sombra suave */
+}
+.header-logo {
+  height: 60px;/* Altura del logo */
+}
+.usuario-nombre {
+  font-size: 1.17em;/* Tamaño de fuente */
+  color: #183b56;/* Color del texto */
+  font-weight: 700;/* Grosor del texto */
+  letter-spacing: 0.5px;/* Espaciado entre letras */
+}
+
+/* ----- Contenedor principal ----- */
+main {
+  display: flex;/* Layout horizontal */
+  justify-content: center;/* Centrado horizontal */
+  align-items: flex-start;/* Alineado arriba */
+  margin: 40px 0 60px;/* Márgenes superior e inferior */
+  min-height: 60vh;/* Altura mínima */
+}
+
+/* ----- Tarjeta del formulario ----- */
+.post-card {
+  background: rgba(255,255,255,0.97);/* Fondo blanco semiopaco */
+  border-radius: 18px;/* Bordes redondeados */
+  box-shadow: 0 8px 48px 0 #90aac6b3,0 1.5px 18px 0 #cad7e88a;/* Sombras decorativas */
+  padding: 44px 44px 32px;/* Espaciado interno */
+  width: 95%;/* Ancho relativo */
+  max-width: 900px;/* Ancho máximo */
+  border: 1.5px solid #e6ecf2;/* Borde */
+  margin: 0 auto;/* Centrado horizontal */
+  transition: box-shadow 0.24s;/* Animación suave */
+}
+.post-card:hover {
+  box-shadow: 0 12px 60px #aac8eaee,0 2px 28px #dbe3eecc;/* Sombra al pasar */
+}
+.post-card h2 {
+  margin: 0 0 35px;/* Margen inferior */
+  color: #252b36;/* Color texto */
+  font-size: 1.33em;/* Tamaño de fuente */
+  background: #bec3c7;/* Fondo del título */
+  padding: 15px 16px;/* Espaciado */
+  border-radius: 9px;/* Bordes redondeados */
+  font-weight: bold;/* Negrita */
+  letter-spacing: 0.04em;/* Espaciado entre letras */
+  box-shadow: 0 2px 10px #dbe4f73f;/* Sombra del título */
+  text-align: left;/* Alineación izquierda */
+}
+
+/* ----- Filas del formulario (diseño horizontal) ----- */
+.form-row {
+  display: flex;/* Layout horizontal */
+  align-items: center;/* Centrado vertical */
+  margin-bottom: 26px;/* Espaciado inferior */
+  gap: 24px;/* Separación entre columnas */
+}
+.form-row label {
+  flex: 0 0 200px;/* Ancho fijo */
+  font-size: 1.08em;/* Tamaño de fuente */
+  font-weight: bold;/* Negrita */
+  color: #23385c;/* Color del texto */
+  text-align: left;/* Alineación */
+  padding-left: 4px;/* Espaciado interno */
+}
+.form-row input,
+.form-row select {
+  flex: 1;/* Ocupa el resto del espacio */
+  width: auto;/* Ancho automático */
+  padding: 13px 12px;/* Espaciado interno */
+  border: 1.5px solid #c0cad7;/* Borde */
+  border-radius: 7px;/* Bordes redondeados */
+  font-size: 1.06em;/* Tamaño de fuente */
+  background: #f8fafb;/* Fondo */
+  transition: border-color 0.17s,box-shadow 0.19s;/* Transiciones */
+  outline: none;/* Quitar contorno azul */
+  box-sizing: border-box;/* Incluir borde en el tamaño */
+}
+.form-row input:focus,
+.form-row select:focus {
+  border: 1.8px solid #5b9cf5;/* Borde al enfocar */
+  box-shadow: 0 0 0 2px #b9d9fcd0;/* Sombra azul clara */
+  background: #fff;/* Fondo blanco */
+}
+
+/* ----- Fila para documento de requisitos ----- */
+.form-upload-row {
+  display: flex;/* Layout horizontal */
+  align-items: center;/* Centrado vertical */
+  margin-bottom: 26px;/* Espaciado inferior */
+  gap: 16px;/* Separación */
+}
+.form-upload-row label {
+  flex: 0 0 200px;/* Ancho fijo */
+  font-size: 1.08em;/* Tamaño */
+  font-weight: bold;/* Negrita */
+  color: #23385c;/* Color texto */
+  text-align: left;/* Alineación */
+  padding-left: 4px;/* Espaciado */
+}
+.form-upload-row .doc-req-input {
+  flex: 1;/* Ocupa el espacio restante */
+  padding: 13px 12px;/* Espaciado */
+  font-size: 1.06em;/* Tamaño */
+  border: 1.5px solid #c0cad7;/* Borde */
+  border-radius: 7px;/* Redondeado */
+  background: #f8fafb;/* Fondo */
+  outline: none;/* Sin contorno */
+  transition: border 0.18s,box-shadow 0.16s;/* Transición */
+}
+.form-upload-row .doc-req-input:focus {
+  border: 1.8px solid #5b9cf5;/* Borde azul */
+  box-shadow: 0 0 0 2px #b9d9fcd0;/* Sombra */
+  background: #fff;/* Fondo blanco */
+}
+.form-upload-row .btn-examinar {
+  flex: 0 0 auto;/* Tamaño automático */
+  background: #3c8dbc;/* Fondo azul */
+  color: #fff;/* Texto blanco */
+  font-weight: bold;/* Negrita */
+  padding: 12px 24px;/* Espaciado */
+  border: none;/* Sin borde */
+  border-radius: 7px;/* Redondeado */
+  font-size: 1em;/* Tamaño */
+  cursor: pointer;/* Cursor */
+  transition: background 0.2s;/* Transición */
+}
+.form-upload-row .btn-examinar:hover {
+  background: #2574a9;/* Color al pasar */
+}
+
+/* ----- Botón principal de postulación ----- */
+.btn-postular {
+  display: block;/* Elemento en bloque */
+  margin: 10px auto 0;/* Centrado */
+  width: 280px;/* Ancho fijo */
+  max-width: 80%;/* Máximo relativo */
+  background: #36d071;/* Verde */
+  color: #fff;/* Blanco */
+  font-size: 1.15em;/* Tamaño */
+  font-weight: bold;/* Negrita */
+  padding: 15px 0;/* Espaciado */
+  border: none;/* Sin borde */
+  border-radius: 9px;/* Redondeado */
+  box-shadow: 0 4px 32px #61e47e3b;/* Sombra */
+  cursor: pointer;/* Cursor */
+  transition: background 0.2s,transform 0.12s;/* Transición */
+  text-align: center;/* Centrado */
+}
+.btn-postular:hover {
+  background: #22c55e;/* Verde oscuro */
+  transform: translateY(-2px) scale(1.03);/* Efecto flotante */
+}
+
+/* ----- Mensaje de error ----- */
+.post-error {
+  color: #e53935;/* Rojo */
+  font-size: 1.07em;/* Tamaño */
+  margin: 14px 0;/* Márgenes */
+  text-align: center;/* Centrado */
+  font-weight: bold;/* Negrita */
+  min-height: 24px;/* Altura mínima */
+}
+
+/* ----- Responsive (verticaliza filas) ----- */
+@media (max-width: 850px) {
+  .form-row,
+  .form-upload-row {
+    flex-direction: column;/* Cambia a vertical */
+    align-items: stretch;/* Estirado */
+    gap: 8px;/* Espaciado */
+  }
+  .form-row label,
+  .form-upload-row label {
+    text-align: left;/* Alineación */
+    margin-bottom: 6px;/* Espacio */
+    flex: none;/* Ancho automático */
+  }
+  .post-card {
+    padding: 24px 6vw 24px;/* Padding móvil */
+  }
+  .post-header {
+    padding: 12px 4vw;/* Padding header móvil */
+  }
+  .header-logo {
+    height: 44px;/* Tamaño logo móvil */
+  }
+}
+
+/* Botón de cerrar sesión en header */
+.btn-salir-header {
+  background: #c62828;/* Rojo */
+  color: #fff;/* Texto blanco */
+  border: none;/* Sin borde */
+  border-radius: 5px;/* Redondeado */
+  padding: 8px 20px;/* Espaciado */
+  font-weight: bold;/* Negrita */
+  cursor: pointer;/* Cursor */
+  font-size: 1em;/* Tamaño */
+  margin-right: 10px;/* Margen derecho */
+  transition: background 0.2s;/* Transición */
+}
+.btn-salir-header:hover {
+  background: #981313;/* Rojo oscuro */
+}

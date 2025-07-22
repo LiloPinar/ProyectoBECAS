@@ -1,0 +1,188 @@
+/* ----- Fondo y tipografía general ----- */
+body {
+    background: #f8f9fa;/*Fondo claro*/
+    margin: 0;/*Sin margen exterior*/
+    font-family: 'Arial', sans-serif;/*Tipografía general*/
+}
+
+/* ----- Header fijo: logo y usuario ----- */
+.post-header {
+    display: flex;/*Distribución horizontal*/
+    align-items: center;/*Centrar verticalmente*/
+    justify-content: space-between;/*Separar logo y usuario*/
+    padding: 14px 38px;/*Espaciado interno*/
+    box-sizing: border-box;/*Incluye borde y padding en tamaño*/
+    background: #fff;/*Fondo blanco*/
+    border-bottom: 2px solid #eee;/*Línea inferior gris claro*/
+    position: sticky;/*Fijo en la parte superior*/
+    top: 0;/*Desde el borde superior*/
+    z-index: 10;/*Prioridad de apilamiento*/
+    box-shadow: 0 2px 18px #e2e9f3a8;/*Sombra inferior*/
+}
+.header-logo {
+    height: 60px;/*Alto del logo*/
+}
+.usuario-nombre {
+    font-size: 1.17em;/*Tamaño del texto*/
+    color: #183b56;/*Color del texto*/
+    font-weight: 700;/*Negrita*/
+    letter-spacing: 0.5px;/*Espaciado entre letras*/
+}
+
+/* ----- Contenedor principal ----- */
+main {
+    display: flex;/*Distribución flexible*/
+    justify-content: center;/*Centrado horizontal*/
+    margin-top: 40px;/*Espacio superior*/
+    margin-bottom: 60px;/*Espacio inferior*/
+    min-height: 85vh;/*Altura mínima*/
+}
+
+/* ----- Tarjeta del formulario ----- */
+.form-card {
+    background: #fff;/*Fondo blanco*/
+    border-radius: 18px;/*Bordes redondeados*/
+    box-shadow: 0 6px 32px #c6282814;/*Sombra*/
+    padding: 38px 44px 36px 44px;/*Espaciado interno*/
+    width: 100%;/*Ocupar ancho completo*/
+    max-width: 650px;/*Ancho máximo*/
+    border: 1.6px solid #eee;/*Borde gris claro*/
+    margin: 0 auto;/*Centrado horizontal*/
+}
+.form-card h2 {
+    margin-top: 0;/*Sin margen superior*/
+    margin-bottom: 32px;/*Espacio inferior*/
+    color: #444;/*Color de texto*/
+    font-size: 1.18em;/*Tamaño de texto*/
+    background: #bdbdbd;/*Fondo gris*/
+    padding: 16px 20px;/*Espaciado interno*/
+    border-radius: 12px;/*Bordes redondeados*/
+    font-weight: bold;/*Negrita*/
+    letter-spacing: 1px;/*Espaciado entre letras*/
+    border-bottom: 2.2px solid #888;/*Línea inferior*/
+    text-align: left;/*Texto alineado a la izquierda*/
+    box-shadow: 0 3px 12px #e3e3e3;/*Sombra inferior*/
+}
+
+/* ----- Instrucción ----- */
+.instruccion {
+    color: #555;/*Color del texto*/
+    margin-bottom: 19px;/*Espacio inferior*/
+    margin-left: 2px;/*Espacio izquierdo*/
+    font-size: 1.02em;/*Tamaño del texto*/
+}
+
+/* ----- Preguntas y opciones ----- */
+.pregunta {
+    margin-bottom: 17px;/*Espacio inferior*/
+}
+.pregunta label {
+    font-weight: bold;/*Negrita*/
+    color: #222;/*Color del texto*/
+    margin-bottom: 4px;/*Espacio inferior*/
+    display: block;/*Etiqueta en bloque*/
+    font-size: 1.07em;/*Tamaño de texto*/
+}
+.opciones {
+    display: flex;/*Distribución flexible*/
+    flex-direction: column;/*Apiladas verticalmente*/
+    gap: 10px;/*Espacio entre opciones*/
+    margin-left: 20px;/*Sangría izquierda*/
+    margin-bottom: 5px;/*Espacio inferior*/
+}
+.opciones label {
+    display: flex;/*Flex para alinear ícono y texto*/
+    align-items: center;/*Centrar verticalmente*/
+    font-weight: normal;/*Peso normal*/
+    color: #373737;/*Color del texto*/
+    font-size: 1em;/*Tamaño del texto*/
+    margin: 0;/*Sin márgenes*/
+    cursor: pointer;/*Cursor tipo mano*/
+    gap: 8px;/*Espacio entre ícono y texto*/
+}
+input[type="radio"],
+input[type="checkbox"] {
+    accent-color: #c62828;/*Color del control*/
+    margin-right: 8px;/*Espacio a la derecha*/
+    margin-bottom: 0;/*Sin espacio inferior*/
+    width: 18px;/*Ancho del control*/
+    height: 18px;/*Alto del control*/
+}
+.opciones-checkbox {
+    flex-direction: column;/*Columnas*/
+    gap: 6px;/*Espacio entre opciones*/
+    margin-left: 20px;/*Sangría izquierda*/
+    margin-bottom: 5px;/*Espacio inferior*/
+}
+
+/* ----- Botones ----- */
+.botones-form {
+    display: flex;/*Flexbox*/
+    justify-content: flex-end;/*Alineado a la derecha*/
+    gap: 18px;/*Espacio entre botones*/
+    margin-top: 25px;/*Espacio superior*/
+}
+.btn-siguiente {
+    background: #2ecc40;/*Fondo verde*/
+    color: #fff;/*Texto blanco*/
+    font-weight: bold;/*Negrita*/
+    padding: 12px 52px;/*Espaciado interno*/
+    border: none;/*Sin borde*/
+    border-radius: 10px;/*Bordes redondeados*/
+    font-size: 1.06em;/*Tamaño del texto*/
+    cursor: pointer;/*Cursor tipo mano*/
+    transition: background 0.2s, box-shadow 0.18s;/*Transiciones*/
+    box-shadow: 0 3px 16px #c6e8d8;/*Sombra*/
+}
+.btn-siguiente:hover {
+    background: #198d34;/*Color al pasar mouse*/
+}
+.btn-salir {
+    background: #c62828;/*Fondo rojo*/
+    color: #fff;/*Texto blanco*/
+    font-weight: bold;/*Negrita*/
+    padding: 12px 52px;/*Espaciado interno*/
+    border: none;/*Sin borde*/
+    border-radius: 10px;/*Bordes redondeados*/
+    font-size: 1.06em;/*Tamaño del texto*/
+    cursor: pointer;/*Cursor tipo mano*/
+    transition: background 0.18s, box-shadow 0.18s;/*Transiciones*/
+    box-shadow: 0 3px 16px #e8c6c6;/*Sombra*/
+}
+.btn-salir:hover {
+    background: #981313;/*Color al pasar mouse*/
+}
+
+/* ----- Responsive para móviles ----- */
+@media (max-width: 850px) {
+    .form-card {
+        padding: 14px 3vw 23px 3vw;/*Espaciado en móviles*/
+    }
+    .form-card h2 {
+        padding: 9px 10px;/*Espaciado interior*/
+        font-size: 1em;/*Tamaño más pequeño*/
+    }
+    .header-logo {
+        height: 40px;/*Logo más pequeño*/
+    }
+    .post-header {
+        padding: 10px 4vw 10px 2vw;/*Espaciado en header*/
+    }
+}
+
+/* Botón de cerrar sesión en header */
+.btn-salir-header {
+    background: #c62828;/*Rojo*/
+    color: #fff;/*Texto blanco*/
+    border: none;/*Sin borde*/
+    border-radius: 5px;/*Bordes redondeados*/
+    padding: 8px 20px;/*Espaciado interno*/
+    font-weight: bold;/*Negrita*/
+    cursor: pointer;/*Cursor tipo mano*/
+    font-size: 1em;/*Tamaño del texto*/
+    margin-right: 10px;/*Espacio a la derecha*/
+    transition: background 0.2s;/*Transición*/
+}
+.btn-salir-header:hover {
+    background: #981313;/*Color más oscuro al pasar mouse*/
+}

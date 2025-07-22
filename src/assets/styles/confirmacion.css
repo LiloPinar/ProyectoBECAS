@@ -1,0 +1,28 @@
+.confirmacion-container {
+    max-width: 440px;/* ancho máximo del contenedor */
+    margin: 70px auto 0 auto;/* margen superior de 70px y centrado horizontal */
+    background: #fff;/* fondo blanco */
+    border-radius: 15px;/* bordes redondeados */
+    box-shadow: 0 4px 24px #1976d240;/* sombra sutil */
+    padding: 35px 28px;/* espacio interno */
+    text-align: center;/* centrado del texto */
+}
+.icono-exito {
+    font-size: 60px;/* tamaño del ícono */
+    color: #43a047;/* color verde de éxito */
+    margin-bottom: 18px;/* separación inferior */
+}
+.btn-volver {
+    margin-top: 30px;/* espacio superior */
+    padding: 12px 28px;/* relleno del botón */
+    font-size: 1.1em;/* tamaño de fuente relativo */
+    border: none;/* sin borde */
+    border-radius: 7px;/* esquinas redondeadas */
+    background: #1976d2;/* fondo azul */
+    color: #fff;/* texto blanco */
+    cursor: pointer;/* cursor en forma de mano */
+    transition: background 0.2s;/* transición suave del fondo */
+}
+.btn-volver:hover {
+    background: #125ea2;/* fondo más oscuro al pasar el cursor */
+}

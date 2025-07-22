@@ -1,0 +1,171 @@
+/* ========== Fondo y tipografía general ========== */
+body {
+    background:#f7f8fa;/*Fondo general gris claro*/
+    font-family:'Roboto',Arial,sans-serif;/*Fuente principal*/
+    margin:0;/*Sin márgenes*/
+}
+
+
+/* ========== Fondo centrado para la tarjeta de login ========== */
+.login-bg {
+    min-height:100vh;/*Alto mínimo igual al alto de la ventana*/
+    display:flex;/*Layout en flexbox*/
+    align-items:center;/*Centrado vertical*/
+    justify-content:center;/*Centrado horizontal*/
+}
+
+
+/* ========== Tarjeta de login ========== */
+.login-card {
+    background:#fff;/*Fondo blanco*/
+    border-radius:10px;/*Bordes redondeados*/
+    box-shadow:0 12px 32px 0 #0002;/*Sombra externa*/
+    width:410px;/*Ancho fijo*/
+    overflow:hidden;/*Oculta desbordes*/
+    border:1.5px solid #e1e1e1;/*Borde gris claro*/
+}
+
+
+/* ========== Header dentro de login ========== */
+.login-header {
+    background:#393939;/*Fondo gris oscuro*/
+    color:#fff;/*Texto blanco*/
+    display:flex;/*Flexbox*/
+    align-items:center;/*Centrado vertical*/
+    justify-content:space-between;/*Separación horizontal*/
+    padding:20px 26px 18px 22px;/*Espaciado interno*/
+}
+
+.header-title {
+    font-size:1.12em;/*Tamaño del título*/
+    font-weight:600;/*Peso del texto*/
+    letter-spacing:1px;/*Espaciado entre letras*/
+}
+
+.header-logo {
+    height:36px;/*Altura del logo*/
+    filter:brightness(0) invert(1);/*Invertir color para fondo oscuro*/
+}
+
+
+/* ========== Cuerpo del formulario ========== */
+.login-body {
+    padding:28px 30px 30px 30px;/*Espaciado interno*/
+}
+
+.login-title {
+    font-weight:500;/*Peso medio*/
+    text-align:center;/*Texto centrado*/
+    margin-bottom:22px;/*Espaciado inferior*/
+    font-size:1.09em;/*Tamaño de texto*/
+    color:#262626;/*Color gris oscuro*/
+}
+
+.login-label {
+    font-size:1em;/*Tamaño estándar*/
+    color:#393939;/*Color gris oscuro*/
+    font-weight:500;/*Peso medio*/
+    margin-bottom:7px;/*Espacio inferior*/
+    margin-top:18px;/*Espacio superior*/
+    display:block;/*Elemento en bloque*/
+}
+
+
+/* ========== Campos del formulario ========== */
+.login-input {
+    width:100%;/*Ancho completo*/
+    padding:9px 11px;/*Espaciado interior*/
+    border:1.5px solid #e0e0e0;/*Borde gris claro*/
+    border-radius:5px;/*Bordes redondeados*/
+    background:#fafbfc;/*Fondo claro*/
+    font-size:1.08em;/*Tamaño del texto*/
+    font-family:inherit;/*Hereda fuente*/
+    box-sizing:border-box;/*Incluye padding y border en el ancho*/
+    outline:none;/*Sin contorno azul al enfocar*/
+    transition:border .18s;/*Transición suave en borde*/
+}
+
+.login-input:focus {
+    border:1.5px solid #059669;/*Borde verde al enfocar*/
+    background:#fff;/*Fondo blanco al enfocar*/
+}
+
+
+/* ========== Mostrar/Ocultar contraseña ========== */
+.login-pass-wrapper {
+    display:flex;/*Flexbox horizontal*/
+    align-items:center;/*Centrado vertical*/
+    position:relative;/*Contenedor relativo para posicionar botón*/
+}
+
+.toggle-pass {
+    background:none;/*Sin fondo*/
+    border:none;/*Sin borde*/
+    outline:none;/*Sin contorno*/
+    position:absolute;/*Posición absoluta*/
+    right:7px;/*Separación derecha*/
+    top:50%;/*Mitad del contenedor*/
+    transform:translateY(-50%);/*Centrado vertical exacto*/
+    cursor:pointer;/*Cursor tipo mano*/
+    padding:3px 5px 3px 7px;/*Espaciado interno*/
+    opacity:0.75;/*Ligera transparencia*/
+}
+
+.toggle-pass:hover svg {
+    filter:drop-shadow(0 0 2px #0ca67866);/*Sombra verde al pasar*/
+}
+
+
+/* ========== Botón de Login ========== */
+.btn-login {
+    background:#15c58d;/*Fondo verde*/
+    color:#fff;/*Texto blanco*/
+    font-weight:500;/*Peso medio*/
+    font-size:1.12em;/*Tamaño del texto*/
+    padding:11px 0 10px 0;/*Espaciado vertical*/
+    border:none;/*Sin borde*/
+    border-radius:6px;/*Bordes redondeados*/
+    cursor:pointer;/*Cursor tipo mano*/
+    box-shadow:0 3px 18px #15c58d22;/*Sombra verde*/
+    margin-top:32px;/*Espacio superior*/
+    margin-bottom:18px;/*Espacio inferior*/
+    width:130px;/*Ancho fijo*/
+    display:block;/*Comportamiento de bloque*/
+    margin-left:auto;/*Centrado horizontal*/
+    margin-right:auto;/*Centrado horizontal*/
+    align-items:center;/*Alineación vertical (no aplicable sin flex)*/
+    justify-content:center;/*Alineación horizontal (no aplicable sin flex)*/
+    gap:3px;/*Espacio entre íconos y texto (no aplicable sin flex)*/
+}
+
+.btn-login:hover,
+.btn-login:focus {
+    background:#109e6e;/*Verde más oscuro*/
+    color:#fff;/*Texto blanco*/
+    box-shadow:0 4px 22px #15c58d3a;/*Sombra más intensa*/
+}
+
+
+/* ========== Mensaje de error ========== */
+.login-error {
+    color:#e53935;/*Rojo para advertencia*/
+    font-size:1em;/*Tamaño estándar*/
+    margin:12px 0 0 0;/*Margen superior*/
+    text-align:center;/*Centrado*/
+    font-weight:bold;/*Texto en negrita*/
+    min-height:22px;/*Altura mínima reservada*/
+}
+
+
+/* ========== Responsive ========== */
+@media(max-width:500px){
+    .login-card {
+        width:96vw;/*Ancho casi completo en móviles*/
+    }
+    .login-body {
+        padding:15px 7vw 25px 7vw;/*Relleno interno adaptable*/
+    }
+    .login-header {
+        padding:16px 8vw 14px 6vw;/*Relleno adaptable*/
+    }
+}

@@ -1,0 +1,204 @@
+/* ========== Fondo y tipografía general ========== */
+body {
+    background:#f8f9fa;/*Fondo gris claro*/
+    margin:0;/*Sin margen exterior*/
+    font-family:'Arial',sans-serif;/*Fuente principal*/
+}
+
+
+/* ========== Header fijo: logo y usuario ========== */
+.post-header {
+    width:100%;/*Ancho completo*/
+    background:#fff;/*Fondo blanco*/
+    border-bottom:2px solid #eee;/*Línea inferior gris clara*/
+    display:flex;/*Flexbox horizontal*/
+    align-items:center;/*Centrado vertical*/
+    justify-content:space-between;/*Separación de extremos*/
+    padding:14px 56px 14px 38px;/*Espaciado interior*/
+    box-sizing:border-box;/*Incluye padding/border en el ancho*/
+    position:sticky;/*Fijo al hacer scroll*/
+    top:0;/*Pegado arriba*/
+    z-index:10;/*Encima de otros elementos*/
+    box-shadow:0 2px 18px #e2e9f3a8;/*Sombra inferior suave*/
+}
+
+.header-logo {
+    height:60px;/*Altura del logo*/
+}
+
+.usuario-nombre {
+    font-size:1.17em;/*Tamaño del texto*/
+    color:#183b56;/*Color azul oscuro*/
+    font-weight:700;/*Negrita*/
+    letter-spacing:0.5px;/*Espaciado entre letras*/
+}
+
+
+/* ========== Contenedor principal ========== */
+main {
+    display:flex;/*Flexbox horizontal*/
+    justify-content:center;/*Centrado horizontal*/
+    margin-top:40px;/*Separación superior*/
+    margin-bottom:60px;/*Separación inferior*/
+    min-height:85vh;/*Altura mínima casi completa*/
+}
+
+
+/* ========== Tarjeta del formulario ========== */
+.form-card {
+    background:#fff;/*Fondo blanco*/
+    border-radius:18px;/*Bordes redondeados*/
+    box-shadow:0 6px 32px #c6282814;/*Sombra sutil*/
+    padding:38px 44px 36px 44px;/*Relleno interior*/
+    width:100%;/*Ancho completo*/
+    max-width:650px;/*Máximo ancho*/
+    border:1.6px solid #eee;/*Borde claro*/
+    margin:0 auto;/*Centrado horizontal*/
+}
+
+.form-card h2 {
+    margin-top:0;/*Sin margen superior*/
+    margin-bottom:32px;/*Margen inferior*/
+    color:#444;/*Texto gris oscuro*/
+    font-size:1.18em;/*Tamaño del título*/
+    background:#bdbdbd;/*Fondo gris medio*/
+    padding:16px 20px;/*Espaciado interno*/
+    border-radius:12px;/*Bordes redondeados*/
+    font-weight:bold;/*Negrita*/
+    letter-spacing:1px;/*Espaciado entre letras*/
+    border-bottom:2.2px solid #888;/*Línea inferior*/
+    text-align:left;/*Alineación izquierda*/
+    box-shadow:0 3px 12px #e3e3e3;/*Sombra inferior clara*/
+}
+
+
+/* ========== Etiquetas y campos del formulario ========== */
+form label {
+    font-weight:bold;/*Texto en negrita*/
+    color:#363636;/*Gris oscuro*/
+    display:block;/*Etiqueta en bloque*/
+    margin:17px 0 6px 0;/*Espaciado vertical*/
+    font-size:1.05em;/*Tamaño del texto*/
+}
+
+form input,
+form select {
+    width:100%;/*Ancho completo*/
+    padding:12px 12px;/*Espaciado interior*/
+    font-size:1.09em;/*Tamaño del texto*/
+    border:1.5px solid #bdbdbd;/*Borde gris claro*/
+    border-radius:10px;/*Bordes redondeados*/
+    margin-bottom:13px;/*Espacio inferior*/
+    box-sizing:border-box;/*Tamaño incluye borde*/
+    background:#f7f7f7;/*Fondo gris muy claro*/
+    transition:border 0.2s, box-shadow 0.2s;/*Animaciones suaves*/
+}
+
+form input:focus,
+form select:focus {
+    border:1.7px solid #c62828;/*Borde rojo*/
+    box-shadow:0 2px 10px #c628281a;/*Sombra roja tenue*/
+    background:#fff;/*Fondo blanco*/
+    outline:none;/*Sin contorno*/
+}
+
+
+/* ========== Botones ========== */
+.botones-form {
+    display:flex;/*Flexbox*/
+    justify-content:flex-end;/*Botones a la derecha*/
+    gap:18px;/*Espacio entre botones*/
+    margin-top:25px;/*Separación superior*/
+}
+
+.btn-siguiente {
+    background:#2ecc40;/*Verde brillante*/
+    color:#fff;/*Texto blanco*/
+    font-weight:bold;/*Negrita*/
+    padding:12px 52px;/*Espaciado interno*/
+    border:none;/*Sin borde*/
+    border-radius:10px;/*Bordes redondeados*/
+    font-size:1.06em;/*Tamaño del texto*/
+    cursor:pointer;/*Cursor de acción*/
+    transition:background 0.2s, box-shadow 0.18s;/*Transición suave*/
+    box-shadow:0 3px 16px #c6e8d8;/*Sombra verde*/
+}
+
+.btn-siguiente:hover {
+    background:#198d34;/*Verde más oscuro*/
+}
+
+.btn-salir {
+    background:#c62828;/*Rojo*/
+    color:#fff;/*Texto blanco*/
+    font-weight:bold;/*Negrita*/
+    padding:12px 52px;/*Espaciado interno*/
+    border:none;/*Sin borde*/
+    border-radius:10px;/*Bordes redondeados*/
+    font-size:1.06em;/*Tamaño del texto*/
+    cursor:pointer;/*Cursor tipo mano*/
+    transition:background 0.18s, box-shadow 0.18s;/*Transiciones suaves*/
+    box-shadow:0 3px 16px #e8c6c6;/*Sombra roja*/
+}
+
+.btn-salir:hover {
+    background:#981313;/*Rojo oscuro*/
+}
+
+
+/* ========== Responsive para móviles ========== */
+@media(max-width:850px){
+    .form-card {
+        padding:14px 3vw 23px 3vw;/*Espaciado adaptado*/
+    }
+    .form-card h2 {
+        padding:9px 10px;/*Espaciado reducido*/
+        font-size:1em;/*Tamaño ajustado*/
+    }
+    .header-logo {
+        height:40px;/*Logo más pequeño*/
+    }
+    .post-header {
+        padding:10px 4vw 10px 2vw;/*Padding responsive*/
+    }
+}
+
+
+/* ========== Botón de cerrar sesión en header ========== */
+.btn-salir-header {
+    background:#c62828;/*Rojo*/
+    color:#fff;/*Texto blanco*/
+    border:none;/*Sin borde*/
+    border-radius:5px;/*Bordes suaves*/
+    padding:8px 20px;/*Espaciado interior*/
+    font-weight:bold;/*Negrita*/
+    cursor:pointer;/*Cursor tipo mano*/
+    font-size:1em;/*Tamaño estándar*/
+    margin-right:10px;/*Separación a la derecha*/
+    transition:background 0.2s;/*Transición de color*/
+}
+
+.btn-salir-header:hover {
+    background:#981313;/*Rojo oscuro*/
+}
+
+
+/* ========== Mensajes de error ========== */
+#telefono-error,
+#fecha-error,
+#semestre-error,
+.error-text {
+    color:#d32f2f !important;/*Rojo fuerte*/
+    font-size:1em;/*Tamaño estándar*/
+    margin:8px 0 0 0;/*Margen superior*/
+    text-align:left;/*Texto alineado a la izquierda*/
+    font-weight:500;/*Peso medio*/
+    min-height:22px;/*Espacio reservado*/
+}
+
+#telefono-error:empty,
+#fecha-error:empty,
+#semestre-error:empty,
+.error-text:empty {
+    display:none !important;/*Ocultar si está vacío*/
+}
