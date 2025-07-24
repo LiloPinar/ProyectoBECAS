@@ -68,11 +68,6 @@ const usuariosValidos = [
     nombreCompleto: "Lilibeth Jamileth Pinarqote Intriago"
   },
   {
-    usuario: " ",
-    contrasena: "123456",
-    nombreCompleto: "Melany Mabel Pinargote Molina"
-  },
-  {
     usuario: "e0803470863",
     contrasena: "12345678",
     nombreCompleto: "Milena Mileidy Ortíz Chere"

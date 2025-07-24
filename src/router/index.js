@@ -9,7 +9,7 @@ import Confirmacion from '../components/Confirmacion.vue'
 import Admin from '../components/Admin.vue'
 
 const routes = [
-  { path: '/', component: InterfazPrincipal },     // Página de inicio
+  { path: '/', component: InterfazPrincipal },     
   { path: '/login', component: Login },
   { path: '/datos-generales', component: DatosGenerales },
   { path: '/postulacion', component: Postulacion },

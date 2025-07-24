@@ -8,7 +8,7 @@ export default defineConfig({
     vue(),
     VitePWA({
       registerType: 'autoUpdate',
-      includeAssets: ['favicon.ico', 'robots.txt'],
+      includeAssets: ['favicon.ico', 'robots.txt','imageninicio.jpg'],
       manifest: {
         name: 'Proyecto Becas',
         short_name: 'Becas',
@@ -29,12 +29,7 @@ export default defineConfig({
             sizes: '512x512',
             type: 'image/png'
           },
-          {
-            src: 'img/pwa-512x512.png',
-            sizes: '512x512',
-            type: 'image/png',
-            purpose: 'any maskable'
-          }
+          
         ]
       }
     })
